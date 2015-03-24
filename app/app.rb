@@ -1,7 +1,8 @@
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 
-autoload :Task,            'models/Task'
-autoload :TasksController, 'controllers/tasks'
+autoload :Task,              'models/Task'
+autoload :TasksController,   'controllers/tasks'
+autoload :WeatherController, 'controllers/weather'
 
 require 'tilt'
 require 'slim'
