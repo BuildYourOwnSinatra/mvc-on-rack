@@ -1,6 +1,8 @@
 require 'json'
 
 class TasksController < BaseApp
+  include TextHelpers
+  
   get '/tasks', :all
 
   def all(env)

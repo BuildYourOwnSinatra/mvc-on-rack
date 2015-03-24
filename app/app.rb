@@ -6,6 +6,7 @@ autoload :TasksController, 'controllers/tasks'
 require 'tilt'
 require 'slim'
 require_relative '../lib/base_app'
+require_relative '../lib/text_helpers'
 
 class App
   def call(env)
