@@ -1,7 +1,18 @@
+GIT
+  remote: git://github.com/kucaahbe/rspec-html-matchers.git
+  revision: b12f1287665b601a0699d5aeb6190c4be74486f1
+  specs:
+    rspec-html-matchers (0.7.0)
+      nokogiri (~> 1)
+      rspec (~> 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
+    mini_portile (0.6.2)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     puma (2.10.2)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
@@ -35,5 +46,6 @@ DEPENDENCIES
   rack-test
   rake
   rspec
+  rspec-html-matchers!
   slim
   tilt

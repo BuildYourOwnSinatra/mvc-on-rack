@@ -11,4 +11,8 @@ class Task
      Task.new(name: 'Snow is kinda cold!'),
      Task.new(name: 'Snow is frozen')]
   end
+
+  def to_json(options)
+    {name: @name}.to_json
+  end
 end
