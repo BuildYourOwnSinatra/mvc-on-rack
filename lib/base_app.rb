@@ -43,4 +43,12 @@ class BaseApp
       Rack::Response.new('Not found', 404)
     end
   end
+
+  def render(path)
+    Tilt.new(file(path)).render(self)
+  end
+
+  def file(path)
+    File.join(File.expand_path(File.dirname(__FILE__)), '..', 'app', 'views', path)
+  end
 end

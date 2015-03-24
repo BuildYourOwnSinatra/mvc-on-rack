@@ -4,15 +4,12 @@ class TasksController < BaseApp
   get '/tasks', :all
 
   def all(env)
+    @tasks = Task.all()
+
     if env['HTTP_ACCEPT'] == 'application/json'
-      [200, {"Content-Type" => "application/json"}, [Task.all().to_json]]
+      [200, {"Content-Type" => "application/json"}, [@tasks.to_json]]
     else
-      resp = '<ul>'
-      Task.all().each do |task|
-        resp << "<li>#{task.name}</li>"
-      end
-      resp << '</ul>'
-      [200, {"Content-Type" => "text/html"}, [resp]]
+      [200, {"Content-Type" => "text/html"}, [render('tasks/index.slim')]]
     end
   end
 end
