@@ -1,5 +1,7 @@
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 
+autoload :Task, 'models/Task'
+
 require_relative '../lib/base_app'
 
 class App
